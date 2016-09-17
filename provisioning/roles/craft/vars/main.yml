@@ -1,4 +1,4 @@
-remote_craft_dir: /vagrant/html
+remote_craft_dir: /vagrant/public
 remote_deploy_user: vagrant
 
 craft_db_name: craftbox
