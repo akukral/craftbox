@@ -47,6 +47,26 @@
     src=db.php.j2
     dest=/vagrant/craft/config/db.php
 
+- name: Remove general.php on the virtual machine
+  file:
+    path=/vagrant/craft/config/db.php
+    state=absent
+
+- name: Copy custom general.php to virtual machine
+  template:
+    src=general.php
+    dest=/vagrant/craft/config/general.php
+
+- name: Remove index.php on the virtual machine
+  file:
+    path=/vagrant/public/index.php
+    state=absent
+
+- name: Copy custom index.php to virtual machine
+  template:
+    src=indexl.php
+    dest=/vagrant/public/index.php
+
 - name: Rename .htaccess
   command: mv /vagrant/public/htaccess /vagrant/public/.htaccess
   when: craft_is_downloaded.stat.exists == False
