@@ -49,7 +49,7 @@
 
 - name: Remove general.php on the virtual machine
   file:
-    path=/vagrant/craft/config/db.php
+    path=/vagrant/craft/config/general.php
     state=absent
 
 - name: Copy custom general.php to virtual machine
@@ -64,7 +64,7 @@
 
 - name: Copy custom index.php to virtual machine
   template:
-    src=indexl.php
+    src=index.php
     dest=/vagrant/public/index.php
 
 - name: Rename .htaccess
