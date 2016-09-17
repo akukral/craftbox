@@ -3,7 +3,7 @@
   remote_user: root
   become: yes
   vars:
-    document_root: /vagrant/public
+    document_root: /vagrant/html
   handlers:
     - name: reload apache
       service: name=apache2 state=reloaded

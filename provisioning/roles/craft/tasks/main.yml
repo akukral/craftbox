@@ -37,6 +37,11 @@
   when: craft_is_downloaded.stat.exists == False
   become_user: vagrant
 
+- name: Rename Public Folder
+  command: mv /vagrant/public /vagrant/html
+  when: craft_is_downloaded.stat.exists == False
+  become_user: vagrant
+
 - name: Remove db.php on the virtual machine
   file:
     path=/vagrant/craft/config/db.php
@@ -59,16 +64,16 @@
 
 - name: Remove index.php on the virtual machine
   file:
-    path=/vagrant/public/index.php
+    path=/vagrant/html/index.php
     state=absent
 
 - name: Copy custom index.php to virtual machine
   template:
     src=index.php
-    dest=/vagrant/public/index.php
+    dest=/vagrant/html/index.php
 
 - name: Rename .htaccess
-  command: mv /vagrant/public/htaccess /vagrant/public/.htaccess
+  command: mv /vagrant/html/htaccess /vagrant/html/.htaccess
   when: craft_is_downloaded.stat.exists == False
   notify:
     - reload apache
