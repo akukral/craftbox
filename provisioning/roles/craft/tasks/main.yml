@@ -71,7 +71,7 @@
   command: mv /vagrant/public/ /vagrant/html/
 
 - name: Rename .htaccess
-  command: mv /vagrant/public/htaccess /vagrant/public/.htaccess
+  command: mv /vagrant/html/htaccess /vagrant/html/.htaccess
   when: craft_is_downloaded.stat.exists == False
   notify:
     - reload apache

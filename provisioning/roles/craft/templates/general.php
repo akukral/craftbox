@@ -17,4 +17,6 @@ return array(
   'errorTemplatePrefix' => 'view/',
   'omitScriptNameInUrls' => true,
   'generateTransformsBeforePageLoad' => true,
+  'imageDriver' => 'gd',
+  'preserveImageColorProfiles' => true
 );
