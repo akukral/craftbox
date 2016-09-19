@@ -8,10 +8,10 @@ Vagrant.configure(2) do |config|
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
   config.trigger.after [:up, :resume] do
     info "Importing Database"
-    run_remote "dbimport.sh"
+    run_remote "/backup/dbimport.sh"
   end
   config.trigger.before [:halt, :destroy] do
     info "Backing-up Database"
-    run_remote "dpexport.sh"
+    run_remote "/backup/dpexport.sh"
   end
 end
