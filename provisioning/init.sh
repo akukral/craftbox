@@ -13,3 +13,6 @@
 
   cd /vagrant/provisioning
   ansible-playbook playbook.yml --connection=local
+
+  # cd ../
+  # mysql -ucraftbox_user -pcraftbox_pass craftbox < test.sql

@@ -1,4 +1,9 @@
+#Vagrant Stuff
+.vagrant
+
 # Craft Storage (cache) [http://buildwithcraft.com/help/craft-storage-gitignore]
 /craft/storage/*
 !/craft/storage/logo/*
+
+#Node Modules
 node_modules
