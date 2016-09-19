@@ -1,17 +1,16 @@
 # Craftbox
 ### A Vagrant "Craft Box" for Craft CMS
-Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft development. Craftbox is intended for Craft developers (like me) that would love to have a simple Vagrant box that installs Craft and all their favorite development tools.
-
-Do you use Wordpress? Check out [Workpress](https://github.com/jalenconner/workpress), my Vagrant box for Wordpress development.
+Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft development. Craftbox is intended for Craft developers (like me) that would love to have a simple Vagrant box that installs Craft and all their favorite development tools. Thanks to Jalen Connor for getting me started on this.
 
 ### Installation
 
 1. Install VirtualBox - https://www.virtualbox.org/
 1. Install Vagrant - http://www.vagrantup.com/
     * Verify Vagrant is installed by running `vagrant -v` in your terminal.
+    * Install Vagrant Triggers for db import and backup `vagrant install plugin vagrant-triggers`
 1. Download Craftbox (choose one of the following ways):
-    * Download and extract the GitHub repository - https://github.com/jalenconner/craftbox/archive/master.zip
-    * Clone the GitHub repository - `git clone https://github.com/jalenconner/craftbox.git`
+    * Download and extract the GitHub repository - https://github.com/akukral/craftbox/archive/master.zip
+    * Clone the GitHub repository - `git clone https://github.com/akukral/craftbox.git`
 1. Navigate to the folder you just downloaded and run `vagrant up` in your terminal. Please be patient; it always take a little time to download and boot up the VM the first time.
 1. Visit http://192.168.33.10 in your browser and you should see your Craft site.
 1. That's it! Were you expecting more?
@@ -58,7 +57,7 @@ A big thanks to the wonderful [Vagrant::Hostsupdater](https://github.com/cogitat
 * [Craft](https://craftcms.com/)
 * [Ansible](https://www.ansible.com)
 
-View the [full list of packages](https://github.com/jalenconner/craftbox/blob/master/PACKAGES.md).   
+View the [full list of packages](https://github.com/jalenconner/craftbox/blob/master/PACKAGES.md).
 Is there something that you think ought to be included here? Open an issue and let me know!
 
 ### Credentials
