@@ -13,8 +13,8 @@ import cssnano from 'cssnano';
 
 import notify from 'gulp-plumber-notifier';
 
-import sync from 'browser-sync';
-sync.create();
+import broswersync from 'browser-sync';
+broswersync.create();
 
 const jsSources = ['./html/public/ui/_js/main.js'];
 const styleSources = ['./html/public/ui/_scss/main.scss'];
@@ -45,7 +45,7 @@ gulp.task('javascript', () => {
       }
     }))
     .pipe(gulp.dest(jsPublic))
-    .pipe(sync.reload({ stream: true }));
+    .pipe(broswersync.reload({ stream: true }));
 });
 
 gulp.task('javascriptBuild', () => {
@@ -68,7 +68,7 @@ gulp.task('javascriptBuild', () => {
       plugins: [new webpack.optimize.UglifyJsPlugin()]
     }))
     .pipe(gulp.dest(jsPublic))
-    .pipe(sync.reload({ stream: true }));
+    .pipe(broswersync.reload({ stream: true }));
 });
 
 gulp.task('styles', () => {
@@ -81,7 +81,7 @@ gulp.task('styles', () => {
     .pipe(sass())
     .pipe(postcss(processors))
     .pipe(gulp.dest(cssPublic))
-    .pipe(sync.reload({ stream: true }));
+    .pipe(broswersync.reload({ stream: true }));
 });
 
 gulp.task('stylesBuild', () => {
@@ -95,20 +95,19 @@ gulp.task('stylesBuild', () => {
     .pipe(sass())
     .pipe(postcss(processors))
     .pipe(gulp.dest(cssPublic))
-    .pipe(sync.reload({ stream: true }));
+    .pipe(broswersync.reload({ stream: true }));
 });
 
 gulp.task('html', () => {
   gulp.src(templateSources)
-    .pipe(sync.reload({ stream: true }));
+    .pipe(broswersync.reload({ stream: true }));
 });
 
 gulp.task('sync', () => {
-  sync.init({
-    server: {
-      baseDir: rootPublic
-    },
-    injectChanges: true
+  broswersync({
+    proxy: '192.168.33.10',
+    injectChanges: true,
+    ghostMode: true
   });
 });
 

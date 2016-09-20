@@ -1,1 +1,74 @@
-!function(e){function r(a){if(t[a])return t[a].exports;var n=t[a]={exports:{},id:a,loaded:!1};return e[a].call(n.exports,n,n.exports,r),n.loaded=!0,n.exports}var t={};return r.m=e,r.c=t,r.p="",r(0)}([function(e,r,t){"use strict";var a=t(1);(0,a.sayName)("allan")},function(e,r){"use strict";Object.defineProperty(r,"__esModule",{value:!0});var t=function(){var e=arguments.length<=0||void 0===arguments[0]?"allan":arguments[0],r=e+" hello";alert(r)},a=function(){return alert("dick!")};r.sayName=t,r.yellName=a}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _alert = __webpack_require__(1);
+
+	var _alert2 = _interopRequireDefault(_alert);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var sayName = function sayName() {
+	  var name = arguments.length <= 0 || arguments[0] === undefined ? 'allan' : arguments[0];
+
+	  var greeting = name + ' hello';
+	  alert(greeting);
+	};
+
+	exports.default = sayName;
+
+/***/ }
+/******/ ]);

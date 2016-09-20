@@ -5,7 +5,4 @@ const sayName = (name='allan') => {
   alert(greeting)
 }
 
-const yellName = () =>
-  alert('dick!')
-
-export {sayName, yellName}
+export default sayName

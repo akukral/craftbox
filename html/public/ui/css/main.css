@@ -1,1 +1,423 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;font:inherit;font-size:100%;vertical-align:baseline;border:0;outline:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}ins{text-decoration:none}del{text-decoration:line-through}table{border-spacing:0;border-collapse:collapse}*,:after,:before{box-sizing:inherit;box-sizing:border-box}body,html{width:100%;min-width:100%;height:100%;min-height:100%;margin:0;padding:0;font-size:62.5%;background:#fff}body{overflow-x:hidden;overflow-y:scroll;min-height:100vh;font-size:21.6px;font-size:1.8rem;-webkit-overflow-scrolling:touch}img{max-width:100%;height:auto}a{-webkit-transition:.2s;transition:.2s;color:#777;-ms-touch-action:manipulation;touch-action:manipulation}a:link,a:visited{text-decoration:none;color:#777;color:transparent;text-shadow:0 0 #777,.04em .04em 0 #fff,0 0,-.04em .04em 0 #fff,.06em .04em 0 #fff,0 0,-.06em .04em 0 #fff,.08em .04em 0 #fff,0 0,-.08em .04em 0 #fff;background:-webkit-linear-gradient(#777,#777) center .85em no-repeat;background:linear-gradient(#777,#777) center .85em no-repeat;background-size:98% 1px;-webkit-transition:.2s ease;transition:.2s ease}@media (max-width:1024px){a:link,a:visited{background-size:98% 1px}}@media (max-width:768px){a:link,a:visited{background:-webkit-linear-gradient(#777,#777) center .88em no-repeat;background:linear-gradient(#777,#777) center .88em no-repeat;background-size:98% 1px}}a:visited{color:hsla(0,0%,47%,.5)}a:active,a:focus,a:hover{opacity:.5}.skip{position:absolute;z-index:-999;top:auto;left:-999px;overflow:hidden;width:1px;height:1px}.skip:active,.skip:focus{z-index:999;top:auto;left:auto;overflow:auto;width:30%;height:auto;text-align:center}button{position:relative;top:0;left:0;margin:0;padding:0;cursor:pointer;-webkit-transition:.2s;transition:.2s;font-size:inherit;font-weight:100;color:#777;border:none;border-radius:0;background:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}button:hover{opacity:.8}button,input,select,textarea{overflow:visible;height:30px;height:2.5rem;margin:0;padding:0;line-height:inherit;vertical-align:bottom;border:none;border-radius:0;outline:none;background:none;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;text-fill-color:#fff}input,select,textarea{border:1px solid currentColor}input:-webkit-autofill,select:-webkit-autofill,textarea:-webkit-autofill{background:#fff!important;box-shadow:inset 0 0 0 1000px #fff;text-fill-color:currentColor;-webkit-text-fill-color:currentColor}:focus-inner,button::-moz-focus-inner,input:-moz-focus-inner,select:-moz-focus-inner{padding:0;border:none}[class*='--']:not([class*=' ']){position:relative;outline:1px solid red}[class*='--']:not([class*=' ']):after{position:absolute;bottom:100%;left:0;content:"ERROR: Cannot have a Modifier (i.e. `." attr(class) "`) without a Block.";font-family:monospace;white-space:nowrap;color:red;background-color:#fff}:root{font-size:12px}@media (min-width:768px) and (max-width:1200px){:root{font-size:calc(12px + 6 * ((100vw - 768px) / 432))}}@media (min-width:1200px){:root{font-size:18px}}body{max-width:760px;margin:0 auto;padding:11.25px;padding:.9375rem;font-family:Gotham,Helvetica,Arial,sans-serif;font-size:inherit;font-weight:400;font-style:normal;line-height:11.25px;line-height:.9375rem;line-height:180%}h1{margin-bottom:0;font-size:18px;font-size:1.5rem}h1,h2{margin-top:0;font-family:inherit;font-weight:600;font-style:inherit;line-height:22.5px;line-height:1.875rem}h2{margin-bottom:11.25px;margin-bottom:.9375rem;font-size:13.5px;font-size:1.125rem}h3{font-size:9.75px;font-size:.8125rem}h3,h4{margin-top:0;margin-bottom:0;font-family:inherit;font-weight:600;font-style:inherit;line-height:11.25px;line-height:.9375rem}h4,h5{font-size:7.5px;font-size:.625rem}h5{margin-top:0;margin-bottom:0;font-family:inherit;font-weight:400;font-style:italic;line-height:11.25px;line-height:.9375rem}blockquote,ol,p,pre,table,ul{margin-top:0;margin-bottom:11.25px;margin-bottom:.9375rem}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}hr{margin:-1px 0;border:1px solid}b,code,em,small,strong{line-height:1}sup{position:relative;top:-.5em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+/* remember to define visible focus styles!
+:focus {
+	outline: ?????;
+} */
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  background: #fff; }
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 100vh;
+  font-size: 21.6px;
+  font-size: 1.8rem;
+  -webkit-overflow-scrolling: touch; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #777;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; }
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #777;
+  color: transparent;
+  text-shadow: 0 0 #777, 0.04em 0.04em 0 #fff, 0 0, -0.04em 0.04em 0 #fff, 0.06em 0.04em 0 #fff, 0 0, -0.06em 0.04em 0 #fff, 0.08em 0.04em 0 #fff, 0 0, -0.08em 0.04em 0 #fff;
+  background: -webkit-linear-gradient(#777, #777) center 0.85em no-repeat;
+  background: linear-gradient(#777, #777) center 0.85em no-repeat;
+  background-size: 98% 1px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease; }
+  @media (max-width: 1024px) {
+    a:link,
+    a:visited {
+      background-size: 98% 1px; } }
+  @media (max-width: 768px) {
+    a:link,
+    a:visited {
+      background: -webkit-linear-gradient(#777, #777) center 0.88em no-repeat;
+      background: linear-gradient(#777, #777) center 0.88em no-repeat;
+      background-size: 98% 1px; } }
+
+a:visited {
+  color: rgba(119, 119, 119, 0.5); }
+
+a:hover,
+a:active,
+a:focus {
+  opacity: .5; }
+
+.skip {
+  position: absolute;
+  z-index: -999;
+  top: auto;
+  left: -999px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px; }
+
+.skip:focus,
+.skip:active {
+  z-index: 999;
+  top: auto;
+  left: auto;
+  overflow: auto;
+  width: 30%;
+  height: auto;
+  text-align: center; }
+
+button {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-size: inherit;
+  font-weight: 100;
+  color: #777;
+  border: none;
+  border-radius: 0;
+  background: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+  button:hover {
+    opacity: .8; }
+
+input,
+button,
+textarea,
+select {
+  overflow: visible;
+  height: 30px;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  vertical-align: bottom;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-fill-color: #fff; }
+
+input,
+textarea,
+select {
+  border: 1px solid currentColor; }
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background: #fff !important;
+  box-shadow: 0 0 0 1000px #fff inset;
+  text-fill-color: currentColor;
+  -webkit-text-fill-color: currentColor; }
+
+button::-moz-focus-inner,
+input:-moz-focus-inner,
+select:-moz-focus-inner,
+*:focus-inner {
+  padding: 0;
+  border: none; }
+
+[class*='--']:not([class*=' ']) {
+  position: relative;
+  outline: 1px solid red; }
+  [class*='--']:not([class*=' ']):after {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    content: "ERROR: Cannot have a Modifier (i.e. `." attr(class) "`) without a Block.";
+    font-family: monospace;
+    white-space: nowrap;
+    color: red;
+    background-color: white; }
+
+:root {
+  font-size: 12px; }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  :root {
+    font-size: calc( 12px + 6 * ( (100vw - 768px) / 432 )); } }
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 18px; } }
+
+body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 11.25px;
+  padding: .9375rem;
+  font-family: 'Gotham', Helvetica, Arial, sans-serif;
+  font-size: inherit;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 11.25px;
+  line-height: .9375rem;
+  line-height: 180%; }
+
+h1 {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: inherit;
+  line-height: 22.5px;
+  line-height: 1.875rem; }
+
+h2 {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 11.25px;
+  margin-bottom: .9375rem;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-style: inherit;
+  line-height: 22.5px;
+  line-height: 1.875rem; }
+
+h3 {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  font-family: inherit;
+  font-size: 9.75px;
+  font-size: .8125rem;
+  font-weight: 600;
+  font-style: inherit;
+  line-height: 11.25px;
+  line-height: .9375rem; }
+
+h4 {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  font-family: inherit;
+  font-size: 7.5px;
+  font-size: .625rem;
+  font-weight: 600;
+  font-style: inherit;
+  line-height: 11.25px;
+  line-height: .9375rem; }
+
+h5 {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  font-family: inherit;
+  font-size: 7.5px;
+  font-size: .625rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 11.25px;
+  line-height: .9375rem; }
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 11.25px;
+  margin-bottom: .9375rem; }
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+hr {
+  margin: -1px 0;
+  border: 1px solid; }
+
+b,
+strong,
+em,
+small,
+code {
+  line-height: 1; }
+
+sup {
+  position: relative;
+  top: -.5em;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -.25em; }
