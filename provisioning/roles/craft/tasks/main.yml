@@ -61,6 +61,9 @@
   file:
     path=/vagrant/public/
     state=absent
+  when: craft_is_downloaded.stat.exists == False
+  notify:
+    - reload apache
 
 # - name: Remove index.php on the virtual machine
 #   file:
@@ -75,8 +78,8 @@
 # - name: Rename Public to HTML
 #   command: mv /vagrant/public/ /vagrant/html/
 
-- name: Rename .htaccess
-  command: mv /vagrant/html/htaccess /vagrant/html/.htaccess
-  when: craft_is_downloaded.stat.exists == False
-  notify:
-    - reload apache
+# - name: Rename .htaccess
+#   command: mv /vagrant/html/htaccess /vagrant/html/.htaccess
+#   when: craft_is_downloaded.stat.exists == False
+#   notify:
+#     - reload apache
