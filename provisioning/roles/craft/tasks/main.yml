@@ -57,18 +57,23 @@
     src=general.php
     dest=/vagrant/craft/config/general.php
 
-- name: Remove index.php on the virtual machine
+- name: Remove Public
   file:
-    path=/vagrant/public/index.php
+    path=/vagrant/public/
     state=absent
 
-- name: Copy custom index.php to virtual machine
-  template:
-    src=index.php
-    dest=/vagrant/public/index.php
+# - name: Remove index.php on the virtual machine
+#   file:
+#     path=/vagrant/public/index.php
+#     state=absent
 
-- name: Rename Public to HTML
-  command: mv /vagrant/public/ /vagrant/html/
+# - name: Copy custom index.php to virtual machine
+#   template:
+#     src=index.php
+#     dest=/vagrant/public/index.php
+
+# - name: Rename Public to HTML
+#   command: mv /vagrant/public/ /vagrant/html/
 
 - name: Rename .htaccess
   command: mv /vagrant/html/htaccess /vagrant/html/.htaccess

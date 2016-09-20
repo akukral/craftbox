@@ -1,0 +1,35 @@
+{% extends "layout/_layout" %}
+
+{% set title = entry.title %}
+{% set metaDescription = entry.metaDescription %}
+{% set metaKeywords = entry.metaKeywords %}
+
+{% block content %}
+<main class="Content">
+	<div class="Content__images">
+		<div class="Content__gallery">
+		{% if entry.images[0] is defined %}
+		{% for image in entry.images %}
+		<div><img src="{{ image.getUrl('gallery') }}" alt=""></div>
+		{% endfor %}
+		{% endif %}
+		</div>
+	</div>
+	<div class="Content__post">
+		<div class="Content__content">
+			<h2 class="Content__title">{{ entry.title }}</h2>
+			<h5 class="Content__date">{{ entry.postDate|date('F d, Y') }}</h5>
+			{{ entry.body }}
+			{% set criteria = {section: 'blog', order: 'postDate'} %}
+			{% set prev = entry.getPrev(criteria) %}
+			{% set next = entry.getNext(criteria) %}
+			{% if prev %}
+			   <a href="{{ prev.url }}" class="Content__prev">Prev</a>
+			{% endif %}
+			{% if next %}
+			   <a href="{{ next.url }}" class="Content__prev">Next</a>
+			{% endif %}
+		</div>
+	</div>
+</main>
+{% endblock %}

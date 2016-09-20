@@ -1,0 +1,73 @@
+@charset 'UTF-8';
+
+button {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+    transition: .2s;
+
+    font-size: inherit;
+    font-weight: 100;
+
+    color: $primary;
+    border: none;
+    border-radius: 0;
+    background: none;
+
+    appearance: none;
+    &:hover {
+        opacity: .8;
+    }
+}
+input,
+button,
+textarea,
+select {
+    overflow: visible;
+
+    height: 2.5rem;
+    margin: 0;
+    padding: 0;
+
+    line-height: inherit;
+    vertical-align: bottom;
+
+    border: none;
+    border-radius: 0 ;
+    outline: none;
+    background: none;
+    box-shadow: none;
+
+    appearance: none;
+    text-fill-color: $white;
+}
+input,
+textarea,
+select {
+    border: 1px solid currentColor;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background: $white !important;
+    -webkit-box-shadow: 0 0 0 1000px $white inset;
+            box-shadow: 0 0 0 1000px $white inset;
+
+            text-fill-color: currentColor;
+    -webkit-text-fill-color: currentColor;
+}
+button::-moz-focus-inner,
+input:-moz-focus-inner,
+select:-moz-focus-inner,
+*:focus-inner {
+    padding: 0;
+
+    border: none;
+}
+
+// EOF

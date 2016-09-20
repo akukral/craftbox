@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
     info "Importing Database"
     run_remote "bash /vagrant/backup/dbimport.sh"
   end
-  config.trigger.before [:halt, :destroy] do
+  config.trigger.before [:halt] do
     info "Backing-up Database"
     run_remote "bash /vagrant/backup/dbexport.sh"
   end
