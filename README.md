@@ -16,7 +16,7 @@ Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft dev
 1. That's it! Were you expecting more?
 
 ### Usage
-##### Basic Vagrant Commands
+##### Basic NPM/Gulp
 Use `npm install` to install Gulp and package.json dependancies.
 
 Run `gulp` to spin up localhost server with Browser Sync.
