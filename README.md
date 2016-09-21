@@ -1,6 +1,6 @@
 # Craftbox
 ### A Vagrant "Craft Box" for Craft CMS
-Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft development. Craftbox is intended for Craft developers (like me) that would love to have a simple Vagrant box that installs Craft and all their favorite development tools. Thanks to Jalen Connor for getting me started on this https://github.com/jalenconner/craftbox/
+Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft development. Craftbox is intended for Craft developers (like me) that would love to have a simple Vagrant box that installs Craft and all their favorite development tools. Thanks to Jalen Davenport for getting me started on this https://github.com/jalenconner/craftbox/
 
 ### Installation
 
