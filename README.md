@@ -1,13 +1,13 @@
 # Craftbox
 ### A Vagrant "Craft Box" for Craft CMS
-Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft development. Craftbox is intended for Craft developers (like me) that would love to have a simple Vagrant box that installs Craft and all their favorite development tools. Thanks to Jalen Connor for getting me started on this.
+Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft development. Craftbox is intended for Craft developers (like me) that would love to have a simple Vagrant box that installs Craft and all their favorite development tools. Thanks to Jalen Connor for getting me started on this https://github.com/jalenconner/craftbox/
 
 ### Installation
 
 1. Install VirtualBox - https://www.virtualbox.org/
 1. Install Vagrant - http://www.vagrantup.com/
     * Verify Vagrant is installed by running `vagrant -v` in your terminal.
-    * Install Vagrant Triggers for db import and backup `vagrant install plugin vagrant-triggers`
+    * Install Vagrant Triggers for db import and backup `vagrant plugin install vagrant-triggers`
 1. Download Craftbox (choose one of the following ways):
     * Download and extract the GitHub repository - https://github.com/akukral/craftbox/archive/master.zip
     * Clone the GitHub repository - `git clone https://github.com/akukral/craftbox.git`
@@ -16,6 +16,12 @@ Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft dev
 1. That's it! Were you expecting more?
 
 ### Usage
+##### Basic Vagrant Commands
+Use `npm install` to install Gulp and package.json dependancies.
+
+Run `gulp` to spin up localhost server with Browser Sync.
+Run `gulp build` to compress js and css.
+
 ##### Basic Vagrant Commands
 Start or resume your server - `vagrant up`
 
