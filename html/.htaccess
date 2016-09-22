@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Send would-be 404 requests to Craft
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+    RewriteRule (.+) index.php?p=$1 [QSA,L]
+
+    # TODO: CHANGE URL TO SITE
+    # RewriteCond %{HTTP_REFERER} !^http://(.+\.)?bootstrap\.dev/ [NC]
+    # RewriteCond %{HTTP_REFERER} !^$
+    # RewriteRule .*\.(jpe?g|gif|bmp|png|jpg)$ /public/ui/images/nohotlink.gif [L]
+
+</IfModule>

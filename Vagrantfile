@@ -6,12 +6,17 @@ Vagrant.configure(2) do |config|
     :keep_color => true,
     :inline => "export PYTHONUNBUFFERED=1 && export ANSIBLE_FORCE_COLOR=1 && cd /vagrant/provisioning && ./init.sh"
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-  config.trigger.after [:up, :resume] do
-    info "Importing Database"
-    run_remote "bash /vagrant/backup/dbimport.sh"
-  end
-  config.trigger.before [:halt] do
-    info "Backing-up Database"
-    run_remote "bash /vagrant/backup/dbexport.sh"
+  if Vagrant.has_plugin? 'vagrant-triggers'
+    config.trigger.after [:up, :resume] do
+      info "Importing Database"
+      run_remote "bash /vagrant/backup/dbimport.sh"
+    end
+    config.trigger.before [:halt, :suspend] do
+      info "Backing-up Database"
+      run_remote "bash /vagrant/backup/dbexport.sh"
+    end
+  else
+    puts 'vagrant-triggers missing, please install the plugin:'
+    puts 'vagrant plugin install vagrant-triggers'
   end
 end
