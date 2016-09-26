@@ -6,13 +6,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
 
 	<!-- Meta Info -->
-	<meta name="description" content="{% if metaDescription is defined and metaDescription != '' %} {{ metaDescription }} {% else %} {{ seo.metaDescription }} {% endif %}">
-	<meta name="keywords" content="{% if metaKeywords is defined and metaKeywords != '' %}{{ metaKeywords }}{% else %}{{ seo.metaKeywords }}{% endif %}">
-	<meta name="google-site-verification" content="TODO" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	{# TODO ADD IN SEOMATIC #}
+	{# {% hook 'seomaticRender' %} #}
 
 	<!-- Mobile App Info -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
@@ -46,49 +45,42 @@
 	<meta name="apple-mobile-web-app-title" content="{{ siteName }}">
 	<meta name="application-name" content="{{ siteName }}">
 
-	{# {% include 'templates/includes/_meta' %} #}
-
 	<!-- Bootstrap CSS -->
 	<link href="/public/ui/css/main.css" rel="stylesheet" id="css-main" media="none" onload="if(media!='all')media='all'">
 	<noscript><link rel="stylesheet" href="/public/ui/css/main.css"></noscript>
+
 </head>
 <body class="">
-	<a href="#Content" class="skip">Skip to main content</a>
-
-	<div class="Header">
-		<h1 class="Header__logo">
+  <header class="Header">
+  	<a href="#Content" class="skip">Skip to main content</a>
+    <h1 class="Header__logo">
 			<a href="/"><img src="/public/uploads/general/allan_kukral.png" alt="Bootstrap"></a>
 		</h1>
-		<nav class="Nav" aria-lable="Primary" role="navigation">
-			<ul>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
-		</nav>
-	</div>
-	<!-- /.Header -->
+    <nav class="Nav" aria-lable="Primary" role="navigation">
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /.Header -->
 
-	<div class="Content" id="Content">
-		{% block content %}
-		<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-		<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-		{% endblock %}
-	</div>
-	<!-- /.Content -->
+  <main class="Content" id="Content">
+    {% block content %}
+    <h1>Something seems to have gone awry.</h1>
+    <p>What’s worse, a hilarious 404 page can’t be found either.</p>
+    {% endblock %}
+  </main>
+  <!-- /.Content -->
 
-	<footer class="Footer" role="contentinfo">
-		<div class="container">
-			<p>&copy; Copyright {{ now.year }} {{ siteName }}</p>
-		</div>
-	</footer>
-	<!-- /.Footer -->
+  <footer class="Footer" role="contentinfo">
+    <p>&copy; Copyright {{ now.year }} {{ siteName }}</p>
+  </footer>
+  <!-- /.Footer -->
 
-	<script>
-	  // TODO: Add Google Analytics
-	</script>
-
-	<script src="/public/ui/js/main.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/public/ui/js/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
+
 <!-- EOF -->
