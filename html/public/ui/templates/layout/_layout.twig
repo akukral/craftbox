@@ -46,15 +46,16 @@
 	<meta name="application-name" content="{{ siteName }}">
 
 	<!-- Bootstrap CSS -->
-	<link href="/public/ui/css/main.css" rel="stylesheet" id="css-main" media="none" onload="if(media!='all')media='all'">
-	<noscript><link rel="stylesheet" href="/public/ui/css/main.css"></noscript>
+	{# <link href="/public/ui/css/main.css" rel="stylesheet" id="css-main" media="none" onload="if(media!='all')media='all'"> #}
+	{# <noscript><link rel="stylesheet" href="/public/ui/css/main.css"></noscript> #}
+	<link href="/public/ui/css/main.css" rel="stylesheet" id="css-main" media="all">
 
 </head>
 <body class="">
   <header class="Header">
   	<a href="#Content" class="skip">Skip to main content</a>
     <h1 class="Header__logo">
-			<a href="/"><img src="/public/uploads/general/allan_kukral.png" alt="Bootstrap"></a>
+			<a href="/">{{ siteName }}{# <img src="/public/uploads/general/allan_kukral.png" alt="Bootstrap"> #}</a>
 		</h1>
     <nav class="Nav" aria-lable="Primary" role="navigation">
       <ul>
