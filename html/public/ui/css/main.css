@@ -177,8 +177,8 @@ a:visited {
   color: #777;
   color: transparent;
   text-shadow: 0 0 #777, 0.04em 0.04em 0 #fff, 0 0, -0.04em 0.04em 0 #fff, 0.06em 0.04em 0 #fff, 0 0, -0.06em 0.04em 0 #fff, 0.08em 0.04em 0 #fff, 0 0, -0.08em 0.04em 0 #fff;
-  background: -webkit-linear-gradient(#777, #777) center 0.85em no-repeat;
-  background: linear-gradient(#777, #777) center 0.85em no-repeat;
+  background: -webkit-linear-gradient(#777, #777) center 1.04em no-repeat;
+  background: linear-gradient(#777, #777) center 1.04em no-repeat;
   background-size: 98% 1px;
   -webkit-transition: .2s ease;
   transition: .2s ease; }
@@ -300,11 +300,11 @@ select:-moz-focus-inner,
 
 @media (min-width: 768px) and (max-width: 1200px) {
   :root {
-    font-size: calc( 12px + 6 * ( (100vw - 768px) / 432 )); } }
+    font-size: calc( 12px + 8 * ( (100vw - 768px) / 432 )); } }
 
 @media (min-width: 1200px) {
   :root {
-    font-size: 18px; } }
+    font-size: 20px; } }
 
 body {
   max-width: 760px;

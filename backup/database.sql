@@ -339,8 +339,6 @@ CREATE TABLE `craft_content` (
   `locale` char(12) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `field_body` text COLLATE utf8_unicode_ci,
-  `field_metaDescription` text COLLATE utf8_unicode_ci,
-  `field_metaKeywords` text COLLATE utf8_unicode_ci,
   `dateCreated` datetime NOT NULL,
   `dateUpdated` datetime NOT NULL,
   `uid` char(36) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
@@ -359,7 +357,7 @@ CREATE TABLE `craft_content` (
 
 LOCK TABLES `craft_content` WRITE;
 /*!40000 ALTER TABLE `craft_content` DISABLE KEYS */;
-INSERT INTO `craft_content` VALUES (1,1,'en_us',NULL,NULL,NULL,NULL,'2016-09-21 23:56:03','2016-09-21 23:56:03','bc6deff9-0f3f-41cc-b9ae-db22edb2b865'),(2,2,'en_us','Welcome to 192.168.33.10!','<p>It’s true, this site doesn’t have a whole lot of content yet, but don’t worry. Our web developers have just installed the CMS, and they’re setting things up for the content editors this very moment. Soon 192.168.33.10 will be an oasis of fresh perspectives, sharp analyses, and astute opinions that will keep you coming back again and again.</p>',NULL,NULL,'2016-09-21 23:56:04','2016-09-21 23:57:29','aebb76bb-b184-4b60-bf99-31808cbe2ed6'),(4,4,'en_us',NULL,NULL,NULL,NULL,'2016-09-21 23:59:49','2016-09-21 23:59:49','3405c63d-27c1-44ab-8982-183474410711');
+INSERT INTO `craft_content` VALUES (1,1,'en_us',NULL,NULL,'2016-09-21 23:56:03','2016-09-21 23:56:03','bc6deff9-0f3f-41cc-b9ae-db22edb2b865'),(2,2,'en_us','Welcome to 192.168.33.10!','<p>It’s true, this site doesn’t have a whole lot of content yet, but don’t worry. Our web developers have just installed the CMS, and they’re setting things up for the content editors this very moment. Soon 192.168.33.10 will be an oasis of fresh perspectives, sharp analyses, and astute opinions that will keep you coming back again and again.</p>','2016-09-21 23:56:04','2016-09-21 23:57:29','aebb76bb-b184-4b60-bf99-31808cbe2ed6');
 /*!40000 ALTER TABLE `craft_content` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -456,7 +454,7 @@ CREATE TABLE `craft_elements` (
 
 LOCK TABLES `craft_elements` WRITE;
 /*!40000 ALTER TABLE `craft_elements` DISABLE KEYS */;
-INSERT INTO `craft_elements` VALUES (1,'User',1,0,'2016-09-21 23:56:03','2016-09-21 23:56:03','bfa0e6eb-2b4c-4302-b634-9e0d8fcf4e3f'),(2,'Entry',1,0,'2016-09-21 23:56:04','2016-09-21 23:57:29','098b6282-30bc-4016-a908-a10649650687'),(4,'GlobalSet',1,0,'2016-09-21 23:59:49','2016-09-21 23:59:49','585ee70c-257d-4162-9b3c-7a6642fc8165');
+INSERT INTO `craft_elements` VALUES (1,'User',1,0,'2016-09-21 23:56:03','2016-09-21 23:56:03','bfa0e6eb-2b4c-4302-b634-9e0d8fcf4e3f'),(2,'Entry',1,0,'2016-09-21 23:56:04','2016-09-21 23:57:29','098b6282-30bc-4016-a908-a10649650687');
 /*!40000 ALTER TABLE `craft_elements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -494,7 +492,7 @@ CREATE TABLE `craft_elements_i18n` (
 
 LOCK TABLES `craft_elements_i18n` WRITE;
 /*!40000 ALTER TABLE `craft_elements_i18n` DISABLE KEYS */;
-INSERT INTO `craft_elements_i18n` VALUES (1,1,'en_us','',NULL,1,'2016-09-21 23:56:03','2016-09-21 23:56:03','b090cfb5-6626-4fc7-a8bf-4d36e5604868'),(2,2,'en_us','homepage','__home__',1,'2016-09-21 23:56:04','2016-09-21 23:57:29','3e55342a-60c1-41d5-a801-022ceef3e0a5'),(4,4,'en_us','',NULL,1,'2016-09-21 23:59:49','2016-09-21 23:59:49','9b4e615d-fba0-47a7-8e7a-fac515a48828');
+INSERT INTO `craft_elements_i18n` VALUES (1,1,'en_us','',NULL,1,'2016-09-21 23:56:03','2016-09-21 23:56:03','b090cfb5-6626-4fc7-a8bf-4d36e5604868'),(2,2,'en_us','homepage','__home__',1,'2016-09-21 23:56:04','2016-09-21 23:57:29','3e55342a-60c1-41d5-a801-022ceef3e0a5');
 /*!40000 ALTER TABLE `craft_elements_i18n` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -715,7 +713,7 @@ CREATE TABLE `craft_fieldgroups` (
 
 LOCK TABLES `craft_fieldgroups` WRITE;
 /*!40000 ALTER TABLE `craft_fieldgroups` DISABLE KEYS */;
-INSERT INTO `craft_fieldgroups` VALUES (1,'Default','2016-09-21 23:56:03','2016-09-21 23:56:03','efa993a5-74fe-4082-a24e-e55897b53050'),(2,'Meta','2016-09-21 23:58:30','2016-09-21 23:58:30','10f2632f-9ffe-4b9f-a0ad-03ffc27f9758');
+INSERT INTO `craft_fieldgroups` VALUES (1,'Default','2016-09-21 23:56:03','2016-09-21 23:56:03','efa993a5-74fe-4082-a24e-e55897b53050');
 /*!40000 ALTER TABLE `craft_fieldgroups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -753,7 +751,7 @@ CREATE TABLE `craft_fieldlayoutfields` (
 
 LOCK TABLES `craft_fieldlayoutfields` WRITE;
 /*!40000 ALTER TABLE `craft_fieldlayoutfields` DISABLE KEYS */;
-INSERT INTO `craft_fieldlayoutfields` VALUES (1,3,1,1,1,1,'2016-09-21 23:56:04','2016-09-21 23:56:04','f7ac20f0-57a6-4d2a-8a38-40cfe6698dba'),(4,6,3,3,0,1,'2016-09-21 23:59:49','2016-09-21 23:59:49','0b591579-4cc4-4bfb-8d98-00cf73ff7c9d'),(5,6,3,4,0,2,'2016-09-21 23:59:49','2016-09-21 23:59:49','0bbb6e86-54f8-48ee-ab5d-68333415edf1');
+INSERT INTO `craft_fieldlayoutfields` VALUES (1,3,1,1,1,1,'2016-09-21 23:56:04','2016-09-21 23:56:04','f7ac20f0-57a6-4d2a-8a38-40cfe6698dba');
 /*!40000 ALTER TABLE `craft_fieldlayoutfields` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -781,7 +779,7 @@ CREATE TABLE `craft_fieldlayouts` (
 
 LOCK TABLES `craft_fieldlayouts` WRITE;
 /*!40000 ALTER TABLE `craft_fieldlayouts` DISABLE KEYS */;
-INSERT INTO `craft_fieldlayouts` VALUES (1,'Tag','2016-09-21 23:56:03','2016-09-21 23:56:03','dc4e038e-aa92-49bb-932e-088cc663ef52'),(3,'Entry','2016-09-21 23:56:04','2016-09-21 23:56:04','18f4e710-635c-4c39-8ca8-070cf8783a7c'),(6,'GlobalSet','2016-09-21 23:59:49','2016-09-21 23:59:49','3dfeba0b-1fcf-423e-afc7-c9b44b356ecc');
+INSERT INTO `craft_fieldlayouts` VALUES (1,'Tag','2016-09-21 23:56:03','2016-09-21 23:56:03','dc4e038e-aa92-49bb-932e-088cc663ef52'),(3,'Entry','2016-09-21 23:56:04','2016-09-21 23:56:04','18f4e710-635c-4c39-8ca8-070cf8783a7c');
 /*!40000 ALTER TABLE `craft_fieldlayouts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -813,7 +811,7 @@ CREATE TABLE `craft_fieldlayouttabs` (
 
 LOCK TABLES `craft_fieldlayouttabs` WRITE;
 /*!40000 ALTER TABLE `craft_fieldlayouttabs` DISABLE KEYS */;
-INSERT INTO `craft_fieldlayouttabs` VALUES (1,3,'Content',1,'2016-09-21 23:56:04','2016-09-21 23:56:04','4ee6f781-60ff-489a-9b8d-03de47788a64'),(3,6,'Content',1,'2016-09-21 23:59:49','2016-09-21 23:59:49','bea5a094-5531-42b9-ae91-7e5c771c4eb5');
+INSERT INTO `craft_fieldlayouttabs` VALUES (1,3,'Content',1,'2016-09-21 23:56:04','2016-09-21 23:56:04','4ee6f781-60ff-489a-9b8d-03de47788a64');
 /*!40000 ALTER TABLE `craft_fieldlayouttabs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -851,7 +849,7 @@ CREATE TABLE `craft_fields` (
 
 LOCK TABLES `craft_fields` WRITE;
 /*!40000 ALTER TABLE `craft_fields` DISABLE KEYS */;
-INSERT INTO `craft_fields` VALUES (1,1,'Body','body','global',NULL,1,'RichText','{\"configFile\":\"Standard.json\",\"columnType\":\"text\"}','2016-09-21 23:56:04','2016-09-21 23:56:04','81df733d-d8ea-4e6e-93a5-b2220b0bc7b2'),(2,1,'Tags','tags','global',NULL,0,'Tags','{\"source\":\"taggroup:1\"}','2016-09-21 23:56:04','2016-09-21 23:56:04','13599bc5-8450-4662-ad31-05ea68314801'),(3,2,'Meta Description','metaDescription','global','',0,'PlainText','{\"placeholder\":\"\",\"maxLength\":\"\",\"multiline\":\"\",\"initialRows\":\"4\"}','2016-09-21 23:58:44','2016-09-21 23:58:44','ba0c5c21-1d11-4263-bb62-d2502ddf6a82'),(4,2,'Meta Keywords','metaKeywords','global','',0,'PlainText','{\"placeholder\":\"\",\"maxLength\":\"\",\"multiline\":\"\",\"initialRows\":\"4\"}','2016-09-21 23:58:49','2016-09-21 23:58:49','cd18bf2f-be46-42e1-a670-91f71ef4e864');
+INSERT INTO `craft_fields` VALUES (1,1,'Body','body','global',NULL,1,'RichText','{\"configFile\":\"Standard.json\",\"columnType\":\"text\"}','2016-09-21 23:56:04','2016-09-21 23:56:04','81df733d-d8ea-4e6e-93a5-b2220b0bc7b2');
 /*!40000 ALTER TABLE `craft_fields` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -885,7 +883,6 @@ CREATE TABLE `craft_globalsets` (
 
 LOCK TABLES `craft_globalsets` WRITE;
 /*!40000 ALTER TABLE `craft_globalsets` DISABLE KEYS */;
-INSERT INTO `craft_globalsets` VALUES (4,'Meta','meta',6,'2016-09-21 23:59:49','2016-09-21 23:59:49','e0abea2a-d41e-4364-9ecb-9c1eee0dba90');
 /*!40000 ALTER TABLE `craft_globalsets` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -922,7 +919,7 @@ CREATE TABLE `craft_info` (
 
 LOCK TABLES `craft_info` WRITE;
 /*!40000 ALTER TABLE `craft_info` DISABLE KEYS */;
-INSERT INTO `craft_info` VALUES (1,'2.6',2940,'2.6.7','2016-09-20 23:00:40',0,'Bootstrap','http://192.168.33.10','UTC',1,0,'stable','2016-09-21 23:56:02','2016-09-21 23:56:02','8964a6bf-ebbc-42c5-bab0-24fb3f662a72');
+INSERT INTO `craft_info` VALUES (1,'2.6',2944,'2.6.7','2016-09-22 22:43:07',0,'Bootstrap','http://192.168.33.10','UTC',1,0,'stable','2016-09-21 23:56:02','2016-09-26 16:26:15','8964a6bf-ebbc-42c5-bab0-24fb3f662a72');
 /*!40000 ALTER TABLE `craft_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1220,7 +1217,7 @@ CREATE TABLE `craft_searchindex` (
 
 LOCK TABLES `craft_searchindex` WRITE;
 /*!40000 ALTER TABLE `craft_searchindex` DISABLE KEYS */;
-INSERT INTO `craft_searchindex` VALUES (1,'username',0,'en_us',' admin '),(1,'firstname',0,'en_us',''),(1,'lastname',0,'en_us',''),(1,'fullname',0,'en_us',''),(1,'email',0,'en_us',' allan vectorliving com '),(1,'slug',0,'en_us',''),(2,'slug',0,'en_us',' homepage '),(2,'title',0,'en_us',' welcome to 192 168 33 10 '),(2,'field',1,'en_us',' it s true this site doesn t have a whole lot of content yet but don t worry our web developers have just installed the cms and they re setting things up for the content editors this very moment soon 192 168 33 10 will be an oasis of fresh perspectives sharp analyses and astute opinions that will keep you coming back again and again '),(4,'slug',0,'en_us',''),(4,'field',4,'en_us',''),(4,'field',3,'en_us','');
+INSERT INTO `craft_searchindex` VALUES (1,'username',0,'en_us',' admin '),(1,'firstname',0,'en_us',''),(1,'lastname',0,'en_us',''),(1,'fullname',0,'en_us',''),(1,'email',0,'en_us',' allan vectorliving com '),(1,'slug',0,'en_us',''),(2,'slug',0,'en_us',' homepage '),(2,'title',0,'en_us',' welcome to 192 168 33 10 '),(2,'field',1,'en_us',' it s true this site doesn t have a whole lot of content yet but don t worry our web developers have just installed the cms and they re setting things up for the content editors this very moment soon 192 168 33 10 will be an oasis of fresh perspectives sharp analyses and astute opinions that will keep you coming back again and again ');
 /*!40000 ALTER TABLE `craft_searchindex` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1316,7 +1313,7 @@ CREATE TABLE `craft_sessions` (
   KEY `craft_sessions_dateUpdated_idx` (`dateUpdated`),
   KEY `craft_sessions_userId_fk` (`userId`),
   CONSTRAINT `craft_sessions_userId_fk` FOREIGN KEY (`userId`) REFERENCES `craft_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1325,7 +1322,7 @@ CREATE TABLE `craft_sessions` (
 
 LOCK TABLES `craft_sessions` WRITE;
 /*!40000 ALTER TABLE `craft_sessions` DISABLE KEYS */;
-INSERT INTO `craft_sessions` VALUES (1,1,'3ee69b30fc9ea0bc4df2580b00aabc75e0fb4367czozMjoiQTY1Nk9OSX5yeEpaNmdiTjNEZ0ZuMmhZZFFJX2hwMG8iOw==','2016-09-21 23:56:03','2016-09-21 23:56:03','51a7ae8c-8de2-441d-ab9c-897cb0082bab');
+INSERT INTO `craft_sessions` VALUES (1,1,'3ee69b30fc9ea0bc4df2580b00aabc75e0fb4367czozMjoiQTY1Nk9OSX5yeEpaNmdiTjNEZ0ZuMmhZZFFJX2hwMG8iOw==','2016-09-21 23:56:03','2016-09-21 23:56:03','51a7ae8c-8de2-441d-ab9c-897cb0082bab'),(2,1,'2cccb076755d4e9ef0ca155deb2b2cac413b62cbczozMjoiTGRvUGpoT0ZJQlFvcFVTOTl6UUN5QmVhZlFrRDc4en4iOw==','2016-09-26 16:17:34','2016-09-26 16:17:34','16cb8691-7b4a-4413-9541-987cb6819fa0');
 /*!40000 ALTER TABLE `craft_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1873,7 +1870,7 @@ CREATE TABLE `craft_users` (
 
 LOCK TABLES `craft_users` WRITE;
 /*!40000 ALTER TABLE `craft_users` DISABLE KEYS */;
-INSERT INTO `craft_users` VALUES (1,'admin',NULL,NULL,NULL,'allan@vectorliving.com','$2y$13$B/pDn1aDrt8eXk..vJ5ELO1QT4whpoZwwpiKLeUCNXiWtOWHocdPS',NULL,0,1,0,0,0,0,0,'2016-09-21 23:56:03','192.168.33.1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'2016-09-21 23:56:03','2016-09-21 23:56:03','2016-09-21 23:56:03','fd86a2e4-4d4b-49c7-b949-2b1ef36982a5');
+INSERT INTO `craft_users` VALUES (1,'admin',NULL,NULL,NULL,'allan@vectorliving.com','$2y$13$B/pDn1aDrt8eXk..vJ5ELO1QT4whpoZwwpiKLeUCNXiWtOWHocdPS',NULL,0,1,0,0,0,0,0,'2016-09-26 16:17:34','192.168.33.1',NULL,NULL,'2016-09-26 16:17:29',NULL,NULL,NULL,NULL,0,'2016-09-21 23:56:03','2016-09-21 23:56:03','2016-09-26 16:17:34','fd86a2e4-4d4b-49c7-b949-2b1ef36982a5');
 /*!40000 ALTER TABLE `craft_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1920,4 +1917,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-22  0:01:52
+-- Dump completed on 2016-09-26 17:17:32

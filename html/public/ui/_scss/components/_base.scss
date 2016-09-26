@@ -95,7 +95,7 @@ a:visited {
   // Needs to be tweaked for different fonts
   text-shadow: 0 0 $primary, .04em .04em 0 #fff, 0 0, -.04em .04em 0 #fff, .06em .04em 0 #fff, 0 0, -.06em .04em 0 #fff, .08em .04em 0 #fff, 0 0, -.08em .04em 0 #fff;
   // Needs to be tweaked for different fonts
-  background: linear-gradient($primary, $primary) center .85em no-repeat;
+  background: linear-gradient($primary, $primary) center 1.04em no-repeat;
   background-size: 98% 1px;
   transition: .2s ease;
   @media (max-width:1024px){
