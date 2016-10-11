@@ -58,53 +58,53 @@ a:visited {
 
 
   // UNDERLINE via gradient background
-  // background-image: linear-gradient(rgba($primary, .25) 0%, $primary 100%);
-  // background-repeat: repeat-x;
-  // background-position: 0 95%;
-  // background-size: 1px 1px;
-  // // Clear descendors from underline
-  // text-shadow: 3px 0 white, 2px 0 white, 1px 0 white, -1px 0 white, -2px 0 white, -3px 0 white;
-  // // Tweak position + thickness for high res (1.75x and up) displays
-  // @media (-webkit-min-device-pixel-ratio: 1.75),
-  // (min-resolution: 168dpi) {
-  //   background-image: linear-gradient(rgba($primary, .25) 0%, $primary 100%);
-  //   background-position: 0 93%;
-  // }
-  // &:hover {
-  //   opacity: .8;
-  //   background-image: linear-gradient(to bottom, darken($primary, 6%) 0%, darken($primary, 6%) 100%);
-  // }
-  // // Style selected links (or else text-shadow makes it look crazy ugly)
-  // // Pseudo selectors must go separately, or they break each other
-  // &, > * {
-  //   &::selection {
-  //     color: #fff;
-  //     background-color: lighten($primary, 25%);
-  //     text-shadow: none;
-  //   }
-  //   &::-moz-selection {
-  //     color: #fff;
-  //     background-color: lighten($primary, 25%);
-  //     text-shadow: none;
-  //   }
-  // }
+  background-image: linear-gradient(rgba($primary, .25) 0%, $primary 100%);
+  background-repeat: repeat-x;
+  background-position: 0 95%;
+  background-size: 1px 1px;
+  // Clear descendors from underline
+  text-shadow: 3px 0 white, 2px 0 white, 1px 0 white, -1px 0 white, -2px 0 white, -3px 0 white;
+  // Tweak position + thickness for high res (1.75x and up) displays
+  @media (-webkit-min-device-pixel-ratio: 1.75),
+  (min-resolution: 168dpi) {
+    background-image: linear-gradient(rgba($primary, .25) 0%, $primary 100%);
+    background-position: 0 93%;
+  }
+  &:hover {
+    opacity: .8;
+    background-image: linear-gradient(to bottom, darken($primary, 6%) 0%, darken($primary, 6%) 100%);
+  }
+  // Style selected links (or else text-shadow makes it look crazy ugly)
+  // Pseudo selectors must go separately, or they break each other
+  &, > * {
+    &::selection {
+      color: #fff;
+      background-color: lighten($primary, 25%);
+      text-shadow: none;
+    }
+    &::-moz-selection {
+      color: #fff;
+      background-color: lighten($primary, 25%);
+      text-shadow: none;
+    }
+  }
 
   // UNDERLINE via invisible text and bg and txt shadow
-  color: $primary;
-  color: transparent;
-  // Needs to be tweaked for different fonts
-  text-shadow: 0 0 $primary, .04em .04em 0 #fff, 0 0, -.04em .04em 0 #fff, .06em .04em 0 #fff, 0 0, -.06em .04em 0 #fff, .08em .04em 0 #fff, 0 0, -.08em .04em 0 #fff;
-  // Needs to be tweaked for different fonts
-  background: linear-gradient($primary, $primary) center 1.04em no-repeat;
-  background-size: 98% 1px;
-  transition: .2s ease;
-  @media (max-width:1024px){
-    background-size: 98% 1px;
-  }
-  @media (max-width:768px){
-    background: linear-gradient($primary, $primary) center .88em no-repeat;
-    background-size: 98% 1px;
-  }
+  // color: $primary;
+  // color: transparent;
+  // // Needs to be tweaked for different fonts
+  // text-shadow: 0 0 $primary, .04em .04em 0 #fff, 0 0, -.04em .04em 0 #fff, .06em .04em 0 #fff, 0 0, -.06em .04em 0 #fff, .08em .04em 0 #fff, 0 0, -.08em .04em 0 #fff;
+  // // Needs to be tweaked for different fonts
+  // background: linear-gradient($primary, $primary) center 1.04em no-repeat;
+  // background-size: 98% 1px;
+  // transition: .2s ease;
+  // @media (max-width:1024px){
+  //   background-size: 98% 1px;
+  // }
+  // @media (max-width:768px){
+  //   background: linear-gradient($primary, $primary) center .88em no-repeat;
+  //   background-size: 98% 1px;
+  // }
 }
 
 a:visited {

@@ -52,6 +52,18 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var menuItems = ['about', 'portfolio', 'contact'];
+
+	var menu = document.querySelector('.Nav ul');
+
+	var list = menuItems.map(function (item) {
+	  return '<li><a href="/' + item + '">' + item + '</a></li>';
+	});
+
+	menu.innerHTML += list.join('');
+
+	// sayName('allan')
+
 /***/ },
 /* 1 */
 /***/ function(module, exports) {

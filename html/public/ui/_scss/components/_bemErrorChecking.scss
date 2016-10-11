@@ -9,7 +9,7 @@ $debug: true;
 //      `class=" foo--bar"`. Use with a pinch of salt.
 //
 @if ($debug == true) {
-  [class*='--']:not([class*=' ']) {
+  [class*='--']:not([class*=' ']), [class*='-']:not([class*=' ']) {
     position: relative;
 
     outline: 1px solid red;

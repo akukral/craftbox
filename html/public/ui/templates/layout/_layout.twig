@@ -21,47 +21,31 @@
 
 	<!-- Favicon Info-->
 	<!-- TODO: Create Icons from http://realfavicongenerator.net/ -->
-	<link rel="apple-touch-icon" sizes="57x57" href="/public/ui/icons/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/public/ui/icons/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/public/ui/icons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/public/ui/icons/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/public/ui/icons/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/public/ui/icons/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/public/ui/icons/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/public/ui/icons/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/public/ui/icons/apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" href="/public/ui/icons/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/public/ui/icons/favicon-194x194.png" sizes="194x194">
-	<link rel="icon" type="image/png" href="/public/ui/icons/favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/png" href="/public/ui/icons/android-chrome-192x192.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="/public/ui/icons/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/public/ui/icons/manifest.json">
-	<link rel="shortcut icon" href="/public/ui/icons/favicon.ico">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/public/ui/icons/mstile-144x144.png">
-	<meta name="msapplication-config" content="/public/ui/icons/browserconfig.xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="/public/ui/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/public/ui/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/public/ui/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/public/ui/favicons/manifest.json">
+	<link rel="mask-icon" href="/public/ui/favicons/safari-pinned-tab.svg" color="#ffffff">
+	<link rel="shortcut icon" href="/public/ui/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/public/ui/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
 	<meta name="apple-mobile-web-app-title" content="{{ siteName }}">
 	<meta name="application-name" content="{{ siteName }}">
 
 	<!-- Bootstrap CSS -->
-	{# <link href="/public/ui/css/main.css" rel="stylesheet" id="css-main" media="none" onload="if(media!='all')media='all'"> #}
-	{# <noscript><link rel="stylesheet" href="/public/ui/css/main.css"></noscript> #}
-	<link href="/public/ui/css/main.css" rel="stylesheet" id="css-main" media="all">
+	<link href="/public/ui/css/main.css" rel="stylesheet" type="text/css" media="all" id="css-main">
 
 </head>
 <body class="">
   <header class="Header">
   	<a href="#Content" class="skip">Skip to main content</a>
     <h1 class="Header__logo">
-			<a href="/">{{ siteName }}{# <img src="/public/uploads/general/allan_kukral.png" alt="Bootstrap"> #}</a>
+			<a href="/">{{ siteName }}</a>
 		</h1>
     <nav class="Nav" aria-lable="Primary" role="navigation">
       <ul>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+      	<a href="/">home</a>
       </ul>
     </nav>
   </header>
