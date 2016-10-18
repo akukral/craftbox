@@ -4,10 +4,10 @@
 
 // These values are the minimum and maximum viewport sizes to apply the font scaling
 $min_width: 768;
-$max_width: 1200;
+$max_width: 1600;
 // These values represent the range of fon-tsize to apply
 // These values effect the base font-size, headings and other elements will scale proportionally
-$min_font: 12;
+$min_font: 14;
 $max_font: 20;
 
 :root { font-size: #{$min_font}px; }
@@ -35,103 +35,79 @@ $max_font: 20;
 body {
   max-width: 760px;
   margin: 0 auto;
-  padding: .9375rem;
+  padding: 1rem;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: inherit;
   font-weight: 400;
   font-style: normal;
-  line-height: .9375rem;
-  line-height: 180%;
+  line-height: 1.5rem;
+  letter-spacing: .03rem
 }
-
-h1 {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-
-  font-family: inherit;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-style: inherit;
-  line-height: 1.875rem;
-}
-h2 {
-  margin-top: 0rem;
-  margin-bottom: .9375rem;
-
-  font-family: inherit;
-  font-size: 1.125rem;
-  font-weight: 600;
-  font-style: inherit;
-  line-height: 1.875rem;
-}
-h3 {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-
-  font-family: inherit;
-  font-size: .8125rem;
-  font-weight: 600;
-  font-style: inherit;
-  line-height: .9375rem;
-}
-h4 {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-
-  font-family: inherit;
-  font-size: .625rem;
-  font-weight: 600;
-  font-style: inherit;
-  line-height: .9375rem;
-}
-h5 {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-
-  font-family: inherit;
-  font-size: .625rem;
+h1,h2,h3,h4,h5,h6{
   font-weight: 400;
-  font-style: italic;
-  line-height: .9375rem;
 }
-p,
-ul,
-ol,
-pre,
-table,
-blockquote {
-  margin-top: 0rem;
-  margin-bottom: .9375rem;
-}
-ul ul,
-ol ol,
-ul ol,
-ol ul {
+h1, .h1 {
+  font-size: 4.25rem;
+  line-height: 4.5rem;
+  margin-top: 1.5rem;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
 }
-hr {
-  margin: -1px 0;
+h2, .h2 {
+  font-size: 2.625rem;
+  line-height: 3rem;
+  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+h3, .h3 {
+  font-size: 1.625rem;
+  line-height: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+h4, .h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+h5, .h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
 
+/* Let's make sure all's aligned */
+hr, .hr {
   border: 1px solid;
+  margin: -1px 0;
 }
-b,
-strong,
-em,
-small,
-code {
-  line-height: 1;
-}
-sup {
-  position: relative;
-  top: -.5em;
-
+a, b, i, strong, em, small, code {
   line-height: 0;
+}
+sub, sup {
+  line-height: 0;
+  position: relative;
   vertical-align: baseline;
 }
+sup {
+  top: -0.5em;
+}
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 // EOF

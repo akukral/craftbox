@@ -42,45 +42,22 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _alert = __webpack_require__(1);
-
-	var _alert2 = _interopRequireDefault(_alert);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var menuItems = ['about', 'portfolio', 'contact'];
-
-	var menu = document.querySelector('.Nav ul');
-
-	var list = menuItems.map(function (item) {
-	  return '<li><a href="/' + item + '">' + item + '</a></li>';
-	});
-
-	menu.innerHTML += list.join('');
-
-	// sayName('allan')
-
-/***/ },
-/* 1 */
 /***/ function(module, exports) {
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	// import sayName from "./modules/alert";
+	// sayName('allan')
+
+	var menuItems = ['portfolio', 'about', 'blog', 'contact'];
+
+	var menu = document.querySelector('.Nav ul');
+
+	var list = menuItems.map(function (item) {
+	  return '<li><a href="#' + item + '">' + item + '</a></li>';
 	});
-	var sayName = function sayName() {
-	  var name = arguments.length <= 0 || arguments[0] === undefined ? 'allan' : arguments[0];
 
-	  var greeting = name + ' hello';
-	  alert(greeting);
-	};
-
-	exports.default = sayName;
+	menu.innerHTML += list.join('');
 
 /***/ }
 /******/ ]);

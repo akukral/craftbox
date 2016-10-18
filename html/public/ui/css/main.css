@@ -156,7 +156,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   min-height: 100vh;
-  font-size: 21.6px;
+  font-size: 25.2px;
   font-size: 1.8rem;
   -webkit-overflow-scrolling: touch; }
 
@@ -164,7 +164,7 @@ img {
   max-width: 100%;
   height: auto; }
 
-a {
+a:link, a:active, a:hover, a:visited {
   -webkit-transition: .2s;
   transition: .2s;
   color: #777;
@@ -173,45 +173,14 @@ a {
 
 a:link,
 a:visited {
-  text-decoration: none;
-  background-image: -webkit-linear-gradient(rgba(119, 119, 119, 0.25) 0%, #777 100%);
-  background-image: linear-gradient(rgba(119, 119, 119, 0.25) 0%, #777 100%);
-  background-repeat: repeat-x;
-  background-position: 0 95%;
-  background-size: 1px 1px;
-  text-shadow: 3px 0 white, 2px 0 white, 1px 0 white, -1px 0 white, -2px 0 white, -3px 0 white; }
-  @media (-webkit-min-device-pixel-ratio: 1.75), (min-resolution: 168dpi) {
-    a:link,
-    a:visited {
-      background-image: -webkit-linear-gradient(rgba(119, 119, 119, 0.25) 0%, #777 100%);
-      background-image: linear-gradient(rgba(119, 119, 119, 0.25) 0%, #777 100%);
-      background-position: 0 93%; } }
-  a:link:hover,
-  a:visited:hover {
-    opacity: .8;
-    background-image: -webkit-linear-gradient(top, #686868 0%, #686868 100%);
-    background-image: linear-gradient(to bottom, #686868 0%, #686868 100%); }
-  a:link::-moz-selection, a:link > *::-moz-selection,
-  a:visited::-moz-selection,
-  a:visited > *::-moz-selection {
-    color: #fff;
-    background-color: #b7b7b7;
-    text-shadow: none; }
-  a:link::selection, a:link > *::selection,
-  a:visited::selection,
-  a:visited > *::selection {
-    color: #fff;
-    background-color: #b7b7b7;
-    text-shadow: none; }
-  a:link::-moz-selection, a:link > *::-moz-selection,
-  a:visited::-moz-selection,
-  a:visited > *::-moz-selection {
-    color: #fff;
-    background-color: #b7b7b7;
-    text-shadow: none; }
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(119, 119, 119, 0.5);
+          text-decoration-color: rgba(119, 119, 119, 0.5);
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink; }
 
 a:visited {
-  color: rgba(119, 119, 119, 0.5); }
+  color: rgba(119, 119, 119, 0.8); }
 
 a:hover,
 a:active,
@@ -263,7 +232,7 @@ button,
 textarea,
 select {
   overflow: visible;
-  height: 30px;
+  height: 35px;
   height: 2.5rem;
   margin: 0;
   padding: 0;
@@ -313,128 +282,114 @@ select:-moz-focus-inner,
     background-color: white; }
 
 :root {
-  font-size: 12px; }
+  font-size: 14px; }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1600px) {
   :root {
-    font-size: calc( 12px + 8 * ( (100vw - 768px) / 432 )); } }
+    font-size: calc( 14px + 6 * ( (100vw - 768px) / 832 )); } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   :root {
     font-size: 20px; } }
 
 body {
   max-width: 760px;
   margin: 0 auto;
-  padding: 11.25px;
-  padding: .9375rem;
+  padding: 14px;
+  padding: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: inherit;
   font-weight: 400;
   font-style: normal;
-  line-height: 11.25px;
-  line-height: .9375rem;
-  line-height: 180%; }
+  line-height: 21px;
+  line-height: 1.5rem;
+  letter-spacing: 0.42px;
+  letter-spacing: .03rem; }
 
-h1 {
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 0px;
-  margin-bottom: 0rem;
-  font-family: inherit;
-  font-size: 18px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-style: inherit;
-  line-height: 22.5px;
-  line-height: 1.875rem; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
 
-h2 {
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 11.25px;
-  margin-bottom: .9375rem;
-  font-family: inherit;
-  font-size: 13.5px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  font-style: inherit;
-  line-height: 22.5px;
-  line-height: 1.875rem; }
-
-h3 {
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 0px;
-  margin-bottom: 0rem;
-  font-family: inherit;
-  font-size: 9.75px;
-  font-size: .8125rem;
-  font-weight: 600;
-  font-style: inherit;
-  line-height: 11.25px;
-  line-height: .9375rem; }
-
-h4 {
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 0px;
-  margin-bottom: 0rem;
-  font-family: inherit;
-  font-size: 7.5px;
-  font-size: .625rem;
-  font-weight: 600;
-  font-style: inherit;
-  line-height: 11.25px;
-  line-height: .9375rem; }
-
-h5 {
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 0px;
-  margin-bottom: 0rem;
-  font-family: inherit;
-  font-size: 7.5px;
-  font-size: .625rem;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 11.25px;
-  line-height: .9375rem; }
-
-p,
-ul,
-ol,
-pre,
-table,
-blockquote {
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 11.25px;
-  margin-bottom: .9375rem; }
-
-ul ul,
-ol ol,
-ul ol,
-ol ul {
+h1, .h1 {
+  font-size: 59.5px;
+  font-size: 4.25rem;
+  line-height: 63px;
+  line-height: 4.5rem;
+  margin-top: 21px;
+  margin-top: 1.5rem;
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem; }
 
-hr {
-  margin: -1px 0;
-  border: 1px solid; }
+h2, .h2 {
+  font-size: 36.75px;
+  font-size: 2.625rem;
+  line-height: 42px;
+  line-height: 3rem;
+  margin-top: 21px;
+  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem; }
 
-b,
-strong,
-em,
-small,
-code {
-  line-height: 1; }
+h3, .h3 {
+  font-size: 22.75px;
+  font-size: 1.625rem;
+  line-height: 42px;
+  line-height: 3rem;
+  margin-top: 21px;
+  margin-top: 1.5rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem; }
 
-sup {
-  position: relative;
-  top: -.5em;
+h4, .h4 {
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 21px;
+  line-height: 1.5rem;
+  margin-top: 21px;
+  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0px;
+  margin-bottom: 0rem; }
+
+h5, .h5 {
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 21px;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-top: 21px;
+  margin-top: 1.5rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem; }
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem; }
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem; }
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0; }
+
+a, b, i, strong, em, small, code {
+  line-height: 0; }
+
+sub, sup {
   line-height: 0;
+  position: relative;
   vertical-align: baseline; }
 
+sup {
+  top: -0.5em; }
+
 sub {
-  bottom: -.25em; }
+  bottom: -0.25em; }
