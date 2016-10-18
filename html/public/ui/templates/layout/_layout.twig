@@ -1,8 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -36,13 +33,17 @@
 	<!-- Bootstrap CSS -->
 	<link href="/public/ui/css/main.css" rel="stylesheet" type="text/css" media="all" id="css-main">
 
+	<!-- Because You're A Piece of Shit IE -->
+	<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
 </head>
 <body class="">
   <header class="Header">
-  	<a href="#Content" class="skip">Skip to main content</a>
     <h1 class="Header__logo">
 			<a href="/">{{ siteName }}</a>
 		</h1>
+  	<a href="#Content" class="skip">Skip to main content</a>
     <nav class="Nav">
       <ul>
       	<li><a href="/">home</a></li>
