@@ -148,39 +148,61 @@ body {
   height: 100%;
   min-height: 100%;
   margin: 0;
-  padding: 0;
   font-size: 62.5%;
   background: #fff; }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
+  padding: 0 14px;
+  padding: 0 1rem;
   font-size: 25.2px;
   font-size: 1.8rem;
   -webkit-overflow-scrolling: touch; }
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  @media (max-width: 768px) {
+    main {
+      -webkit-box-flex: initial;
+          -ms-flex-positive: initial;
+              flex-grow: initial; } }
 
 img {
   max-width: 100%;
   height: auto; }
 
-a:link, a:active, a:hover, a:visited, a:focus {
+a:link,
+a:active,
+a:hover,
+a:visited,
+a:focus {
   -webkit-transition: .2s;
   transition: .2s;
-  color: #777;
+  color: #555;
   -ms-touch-action: manipulation;
       touch-action: manipulation; }
 
 a:link,
 a:visited {
   text-decoration: underline;
-  -webkit-text-decoration-color: rgba(119, 119, 119, 0.5);
-          text-decoration-color: rgba(119, 119, 119, 0.5);
+  -webkit-text-decoration-color: rgba(85, 85, 85, 0.7);
+          text-decoration-color: rgba(85, 85, 85, 0.7);
   -webkit-text-decoration-skip: ink;
           text-decoration-skip: ink; }
 
 a:visited {
-  color: rgba(119, 119, 119, 0.8); }
+  color: rgba(85, 85, 85, 0.8); }
 
 a:hover,
 a:active,
@@ -218,7 +240,7 @@ button {
   transition: .2s;
   font-size: inherit;
   font-weight: 100;
-  color: #777;
+  color: #555;
   border: none;
   border-radius: 0;
   background: none;
@@ -269,19 +291,6 @@ select:-moz-focus-inner,
   padding: 0;
   border: none; }
 
-[class*='--']:not([class*=' ']), [class*='-']:not([class*=' ']) {
-  position: relative;
-  outline: 1px solid red; }
-  [class*='--']:not([class*=' ']):after, [class*='-']:not([class*=' ']):after {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    content: "ERROR: Cannot have a Modifier (i.e. `." attr(class) "`) without a Block.";
-    font-family: monospace;
-    white-space: nowrap;
-    color: red;
-    background-color: white; }
-
 :root {
   font-size: 14px; }
 
@@ -294,10 +303,6 @@ select:-moz-focus-inner,
     font-size: 20px; } }
 
 body {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 14px;
-  padding: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: inherit;
   font-weight: 400;
@@ -375,6 +380,11 @@ ul ul, ol ol, ul ol, ol ul {
   margin-top: 0rem;
   margin-bottom: 0px;
   margin-bottom: 0rem; }
+
+li {
+  font-size: inherit;
+  line-height: 21px;
+  line-height: 1.5rem; }
 
 /* Let's make sure all's aligned */
 hr, .hr {
