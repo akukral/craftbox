@@ -182,6 +182,7 @@ a:focus {
 
 a:link,
 a:visited {
+  text-decoration: none;
   text-decoration: underline;
   -webkit-text-decoration-color: rgba(85, 85, 85, 0.7);
           text-decoration-color: rgba(85, 85, 85, 0.7);

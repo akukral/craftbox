@@ -15,13 +15,6 @@ Craftbox is a simple Vagrant box running Ubuntu 14.04 and targeted for Craft dev
 1. Visit http://192.168.33.10 in your browser and you should see your Craft site.
 1. That's it! Were you expecting more?
 
-### Usage
-##### Basic NPM/Gulp
-Use `npm install` to install Gulp and package.json dependancies.
-
-Run `gulp` to spin up localhost server with Browser Sync.
-Run `gulp build` to compress js and css.
-
 ##### Basic Vagrant Commands
 Start or resume your server - `vagrant up`
 
@@ -30,6 +23,13 @@ Pause your server - `vagrant suspend`
 Turn off your server - `vagrant halt`
 
 SSH into your server - `vagrant ssh`
+
+### Usage
+##### Basic NPM/Gulp
+Use `npm install` to install Gulp and package.json dependancies.
+
+Run `gulp` to spin up local server at http://localhost:3000 with BrowserSync once your vagrant server is up.
+Run `gulp build` to compress js and css.
 
 ##### Provisioning
 I am currently using [Ansible](https://www.ansible.com) to provision the box. You can find all the provisioning files in the provisioning folder. Vagrant uses the Vagrantfile to run a shell script on the VM that installs Ansible and starts the Ansible playbook. That way you don't have to install Ansible on your host machine.

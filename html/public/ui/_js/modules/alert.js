@@ -1,8 +1,10 @@
 'use strict'
 
 const sayName = (name='allan') => {
-  let greeting = `${name} hello`
+  let greeting = `Hello, ${name}!`
   alert(greeting)
 }
 
 export default sayName
+
+// EOF

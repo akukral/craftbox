@@ -58,16 +58,17 @@ a:focus {
 }
 a:link,
 a:visited {
-  // text-decoration: none;
+  text-decoration: none;
   text-decoration: underline;
 
   text-decoration-color: fade-out($primary,.3);
   text-decoration-skip: ink;
-  // UNDERLINE via bg image
+
+  // // UNDERLINE via bg image
   // box-shadow: inset 0 -1px 0 0 #fff, inset 0 -2px 0 0 currentColor;
   // text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 3px 0 0 #fff, -3px 0 0 #fff, 4px 0 0 #fff, -4px 0 0 #fff;
-  // text-decoration-skip: ink;
-  // UNDERLINE via gradient background
+
+  // // UNDERLINE via gradient background
   // background-image: linear-gradient(rgba($primary, .25) 0%, $primary 100%);
   // background-repeat: repeat-x;
   // background-position: 0 95%;
@@ -98,7 +99,8 @@ a:visited {
   //     text-shadow: none;
   //   }
   // }
-  // UNDERLINE via invisible text and bg and txt shadow
+
+  // // UNDERLINE via invisible text and bg and txt shadow
   // color: $primary;
   // color: transparent;
   // // Needs to be tweaked for different fonts

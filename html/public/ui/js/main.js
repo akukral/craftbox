@@ -47,9 +47,14 @@
 	'use strict';
 
 	// import sayName from "./modules/alert";
-	// sayName('allan')
+	// sayName('steve')
 
 	var menuItems = ['portfolio', 'about', 'blog', 'contact'];
+
+	// (()=>{
+	//   const menuItems = [];
+	//   alert(menuItems)
+	// })()
 
 	var menu = document.querySelector('.Nav ul');
 
@@ -58,6 +63,8 @@
 	});
 
 	menu.innerHTML += list.join('');
+
+	// EOF
 
 /***/ }
 /******/ ]);
