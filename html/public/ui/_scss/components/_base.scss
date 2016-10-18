@@ -37,7 +37,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-a:link, a:active, a:hover, a:visited {
+a:link, a:active, a:hover, a:visited, a:focus {
   transition: .2s;
 
   color: $primary;
@@ -129,6 +129,7 @@ a:focus {
   width: 1px;
   height: 1px;
 }
+.skip:hover,
 .skip:focus,
 .skip:active {
   z-index: 999;
@@ -137,7 +138,7 @@ a:focus {
 
   overflow: auto;
 
-  width: 30%;
+  width: auto;
   height: auto;
 
   text-align: center;
