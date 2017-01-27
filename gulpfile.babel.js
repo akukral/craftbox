@@ -73,7 +73,7 @@ gulp.task('javascriptBuild', () => {
 
 gulp.task('styles', () => {
   let processors = [
-    cssnext({browsers: ['last 1 version']})
+    cssnext({browsers: ['last 4 version']})
   ]
 
   gulp.src(styleSources)
@@ -86,7 +86,7 @@ gulp.task('styles', () => {
 
 gulp.task('stylesBuild', () => {
   let processors = [
-    cssnext({browsers: ['last 1 version']}),
+    cssnext({browsers: ['last 4 version']}),
     cssnano()
   ]
 
