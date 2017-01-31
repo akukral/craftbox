@@ -108,6 +108,7 @@ gulp.task('sync', () => {
     proxy: '192.168.33.10',
     injectChanges: true,
     ghostMode: true
+    // https: true
   });
 });
 
