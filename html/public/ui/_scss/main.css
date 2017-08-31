@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-// Base & Reset
+/*Base & Reset*/
 @import './components/_reset';
 @import './components/_colors';
 @import './components/_base';
