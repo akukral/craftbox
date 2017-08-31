@@ -25,6 +25,7 @@
     "gulp-plumber-notifier": "latest",
     "gulp-postcss": "latest",
     "gulp-sass": "latest",
+    "node-sass": "4.5.3",
     "postcss-cssnext": "latest",
     "webpack": "latest",
     "webpack-stream": "latest"

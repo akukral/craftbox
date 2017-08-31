@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+:root{
+  --white: #fff;
+  --black: #000;
+
+  --primary: #041e7f;
+  --secondary: #e2e71f;
+  --tertiary: #afbab8;
+  --tertiary: #636363;
+
+  --gray: var(--tertiary);
+  --gray-dark: var(--tertiary);
+  --gray-medium: #eee;
+  --gray-light: #f5f5f5;
+}
+// EOF

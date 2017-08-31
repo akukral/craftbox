@@ -1,0 +1,149 @@
+@charset 'UTF-8';
+
+// Typographic styles and vertical rhythm pulled from http://www.gridlover.net/app/
+
+:root{
+  // These values are the minimum and maximum viewport sizes to apply the font scaling
+  --min_width: 768px;
+  --max_width: 1600px;
+  // These values represent the range of fon-tsize to apply
+  // These values effect the base font-size, headings and other elements will scale proportionally
+  --min_font: 14px;
+  --max_font: 20px;
+}
+
+:root { font-size: --var(min-font); }
+@media (min-width: --var(min-width)) and (max-width: --var(max-width)){
+  :root {
+    font-size: calc(--var(min-font) + (--var(max-width) - --var(min-font)) * ((100vw - --var(min-width)) / (--var(max-width) - --var(min-width))));
+  }
+}
+@media (min-width: --var(max-width)){
+ :root {
+   font-size: --var(max-width);
+ }
+}
+
+// Scales by 1px for every 100px from 600px onwards
+// @media (min-width: 600px) {
+//     font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+// }
+
+// Sets font-size to 22px after a viewport of 1000px
+// @media (min-width: 1000px) {
+//     font-size: calc(137.5%);
+// }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: inherit;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5rem;
+  letter-spacing: .03rem;
+  text-size-adjust: 100% !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+h1,
+.h1 {
+  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+
+  font-size: 4.25rem;
+  line-height: 4.5rem;
+}
+h2,
+.h2 {
+  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+
+  font-size: 2.625rem;
+  line-height: 3rem;
+}
+h3,
+.h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+
+  font-size: 1.625rem;
+  line-height: 3rem;
+}
+h4,
+.h4 {
+  margin-top: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0rem;
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+h5,
+.h5 {
+  margin-top: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+li {
+  font-size: inherit;
+  line-height: 1.5rem;
+}
+
+/* Let's make sure all's aligned */
+hr,
+.hr {
+  margin: -1px 0;
+
+  border: 1px solid;
+}
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+sub,
+sup {
+  position: relative;
+
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -.5em;
+}
+sub {
+  bottom: -.25em;
+}
+
+// EOF

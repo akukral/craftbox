@@ -20,7 +20,7 @@ import broswersync from 'browser-sync';
 broswersync.create();
 
 const jsSources = ['./html/public/ui/_js/main.js'];
-const styleSources = ['./html/public/ui/_scss/main.scss'];
+const styleSources = ['./html/public/ui/_scss/main.css'];
 const templateSources = ['./html/**/*.html', '.html/**/*.twig'];
 
 const jsPublic = './html/public/ui/js';
@@ -75,7 +75,7 @@ gulp.task('javascriptBuild', () => {
 
 gulp.task('styles', () => {
   const processors = [
-    cssnext({browsers: ['last 4 version']}),
+    cssnext({ browsers: ['last 5 version'] }),
   ];
 
   gulp.src(styleSources)
@@ -88,7 +88,7 @@ gulp.task('styles', () => {
 
 gulp.task('stylesBuild', () => {
   const processors = [
-    cssnext({browsers: ['last 5 version']}),
+    cssnext({ browsers: ['last 5 version'] }),
     cssnano(),
   ];
 
@@ -121,8 +121,8 @@ gulp.task('sync', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('html/public/ui/_js/**/*.js', ['javascript']);
-  gulp.watch('html/public/**/*.scss', ['styles']);
+  gulp.watch('./html/public/ui/_js/**/*.js', ['javascript']);
+  gulp.watch('./html/public/**/*.css', ['styles']);
   gulp.watch(templateSources, ['html']);
 });
 

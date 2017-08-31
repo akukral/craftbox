@@ -14,7 +14,7 @@ button {
     font-size: inherit;
     font-weight: 100;
 
-    color: $primary;
+    color: var(--primary);
     border: none;
     border-radius: 0;
     background: none;
@@ -44,7 +44,7 @@ select {
     box-shadow: none;
 
     appearance: none;
-    text-fill-color: $white;
+    text-fill-color: var(--white);
 }
 input,
 textarea,
@@ -54,9 +54,9 @@ select {
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-    background: $white !important;
-    -webkit-box-shadow: 0 0 0 1000px $white inset;
-            box-shadow: 0 0 0 1000px $white inset;
+    background: var(--white) !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
+            box-shadow: 0 0 0 1000px var(--white) inset;
 
             text-fill-color: currentColor;
     -webkit-text-fill-color: currentColor;

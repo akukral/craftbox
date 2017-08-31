@@ -161,9 +161,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  padding: 0 14px;
+  padding: 0 10px;
   padding: 0 1rem;
-  font-size: 25.2px;
+  font-size: 18px;
   font-size: 1.8rem;
   -webkit-overflow-scrolling: touch; }
 
@@ -187,7 +187,7 @@ a:hover,
 a:visited,
 a:focus {
   transition: .2s;
-  color: #555;
+  color: #041e7f;
   -ms-touch-action: manipulation;
       touch-action: manipulation; }
 
@@ -195,14 +195,10 @@ a:link,
 a:visited {
   text-decoration: none;
   text-decoration: underline;
-  -webkit-text-decoration-color: rgba(85, 85, 85, 0.7);
-          text-decoration-color: rgba(85, 85, 85, 0.7);
+  -webkit-text-decoration-color: rgb(79, 98, 165);
+          text-decoration-color: rgb(79, 98, 165);
   -webkit-text-decoration-skip: ink;
           text-decoration-skip: ink; }
-
-a:visited {
-  color: #555555;
-  color: rgba(85, 85, 85, 0.8); }
 
 a:hover,
 a:active,
@@ -239,7 +235,7 @@ button {
   transition: .2s;
   font-size: inherit;
   font-weight: 100;
-  color: #555;
+  color: #041e7f;
   border: none;
   border-radius: 0;
   background: none;
@@ -254,7 +250,7 @@ button,
 textarea,
 select {
   overflow: visible;
-  height: 35px;
+  height: 25px;
   height: 2.5rem;
   margin: 0;
   padding: 0;
@@ -291,24 +287,24 @@ select:-moz-focus-inner,
   border: none; }
 
 :root {
-  font-size: 14px; }
+  font-size: 10px; }
 
 @media (min-width: 768px) and (max-width: 1600px) {
   :root {
-    font-size: calc(14px + 6 * ((100vw - 768px) / 832)); } }
+    font-size: calc(10px + 8 * ((100vw - 768px) / 832)); } }
 
 @media (min-width: 1600px) {
   :root {
-    font-size: 20px; } }
+    font-size: 18px; } }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: inherit;
   font-weight: 400;
   font-style: normal;
-  line-height: 21px;
+  line-height: 15px;
   line-height: 1.5rem;
-  letter-spacing: 0.42px;
+  letter-spacing: 0.3px;
   letter-spacing: .03rem;
   -webkit-text-size-adjust: 100% !important;
       -ms-text-size-adjust: 100% !important;
@@ -324,61 +320,61 @@ h6 {
 
 h1,
 .h1 {
-  margin-top: 21px;
+  margin-top: 15px;
   margin-top: 1.5rem;
   margin-top: 0;
-  margin-bottom: 21px;
+  margin-bottom: 15px;
   margin-bottom: 1.5rem;
-  font-size: 59.5px;
+  font-size: 42.5px;
   font-size: 4.25rem;
-  line-height: 63px;
+  line-height: 45px;
   line-height: 4.5rem; }
 
 h2,
 .h2 {
-  margin-top: 21px;
+  margin-top: 15px;
   margin-top: 1.5rem;
   margin-top: 0;
-  margin-bottom: 21px;
+  margin-bottom: 15px;
   margin-bottom: 1.5rem;
-  font-size: 36.75px;
+  font-size: 26.25px;
   font-size: 2.625rem;
-  line-height: 42px;
+  line-height: 30px;
   line-height: 3rem; }
 
 h3,
 .h3 {
-  margin-top: 21px;
+  margin-top: 15px;
   margin-top: 1.5rem;
   margin-bottom: 0px;
   margin-bottom: 0rem;
-  font-size: 22.75px;
+  font-size: 16.25px;
   font-size: 1.625rem;
-  line-height: 42px;
+  line-height: 30px;
   line-height: 3rem; }
 
 h4,
 .h4 {
-  margin-top: 21px;
+  margin-top: 15px;
   margin-top: 1.5rem;
   margin-top: 0;
   margin-bottom: 0px;
   margin-bottom: 0rem;
-  font-size: 14px;
+  font-size: 10px;
   font-size: 1rem;
-  line-height: 21px;
+  line-height: 15px;
   line-height: 1.5rem; }
 
 h5,
 .h5 {
   margin-top: 0;
-  margin-top: 21px;
+  margin-top: 15px;
   margin-top: 1.5rem;
   margin-bottom: 0px;
   margin-bottom: 0rem;
-  font-size: 14px;
+  font-size: 10px;
   font-size: 1rem;
-  line-height: 21px;
+  line-height: 15px;
   line-height: 1.5rem; }
 
 p,
@@ -389,7 +385,7 @@ table,
 blockquote {
   margin-top: 0px;
   margin-top: 0rem;
-  margin-bottom: 21px;
+  margin-bottom: 15px;
   margin-bottom: 1.5rem; }
 
 ul ul,
@@ -403,7 +399,7 @@ ol ul {
 
 li {
   font-size: inherit;
-  line-height: 21px;
+  line-height: 15px;
   line-height: 1.5rem; }
 
 /* Let's make sure all's aligned */
