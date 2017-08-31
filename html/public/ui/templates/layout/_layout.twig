@@ -30,9 +30,6 @@
 	<meta name="apple-mobile-web-app-title" content="{{ siteName }}">
 	<meta name="application-name" content="{{ siteName }}">
 
-	<!-- Bootstrap CSS -->
-	<link href="/public/ui/css/main.css" rel="stylesheet" type="text/css" media="all" id="css-main">
-
 	<!-- Because You're A Piece of Shit IE -->
 	<!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -65,7 +62,14 @@
   </footer>
   <!-- /.Footer -->
 
-  <script src="/public/ui/js/main.js" type="text/javascript" charset="utf-8" async></script>
+
+	<link rel="preload" href="/public/ui/css/main.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/ui/css/main.css"></noscript>
+  <script async defer>
+    function loadCSS(e){var n=window.document.createElement("link"),t=window.document.getElementsByTagName("head")[0];n.rel="stylesheet",n.href=e,n.media="only x",t.parentNode.insertBefore(n,t),setTimeout(function(){n.media="all"},0)}loadCSS("/public/ui/css/main.css");
+  </script>
+
+  <script src="/public/ui/js/main.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
 

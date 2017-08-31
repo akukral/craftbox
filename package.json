@@ -21,11 +21,12 @@
     "cssnano": "latest",
     "gulp": "latest",
     "gulp-babel": "latest",
+    "gulp-imagemin": "3.3.0",
     "gulp-plumber-notifier": "latest",
     "gulp-postcss": "latest",
     "gulp-sass": "latest",
-    "webpack": "latest",
     "postcss-cssnext": "latest",
+    "webpack": "latest",
     "webpack-stream": "latest"
   }
 }
