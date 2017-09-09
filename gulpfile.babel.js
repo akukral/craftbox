@@ -36,7 +36,7 @@ gulp.task('javascript', () => {
         loaders: [{
           test: /\.js$/,
           exclude: /(node_modules)/,
-          loader: 'babel',
+          loader: 'babel-loader',
           query: {
             presets: ['es2015'],
           },
@@ -58,7 +58,7 @@ gulp.task('javascriptBuild', () => {
         loaders: [{
           test: /\.js$/,
           exclude: /(node_modules)/,
-          loader: 'babel',
+          loader: 'babel-loader',
           query: {
             presets: ['es2015'],
           },

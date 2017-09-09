@@ -139,25 +139,35 @@ table {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-  box-sizing: border-box; }
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 html,
 body {
   width: 100%;
   min-width: 100%;
+  max-width: 100%;
   height: 100%;
   min-height: 100%;
   margin: 0;
   font-size: 62.5%;
-  background: #fff; }
+  background: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
 
 body {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -169,11 +179,13 @@ body {
   -webkit-overflow-scrolling: touch; }
 
 main {
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
   @media (max-width: 768px) {
     main {
+      -webkit-box-flex: initial;
       -webkit-flex-grow: initial;
           -ms-flex-positive: initial;
               flex-grow: initial; } }
@@ -187,6 +199,8 @@ a:active,
 a:hover,
 a:visited,
 a:focus {
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
   color: #041e7f;
   -ms-touch-action: manipulation;
@@ -233,6 +247,8 @@ button {
   margin: 0;
   padding: 0;
   cursor: pointer;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
   font-size: inherit;
   font-weight: 100;
@@ -261,7 +277,8 @@ select {
   border-radius: 0;
   outline: none;
   background: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -276,6 +293,7 @@ input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
   background: #fff !important;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
   box-shadow: 0 0 0 1000px #fff inset;
   text-fill-color: currentColor;
   -webkit-text-fill-color: currentColor; }
@@ -292,7 +310,7 @@ select:-moz-focus-inner,
 
 @media (min-width: 768px) and (max-width: 1600px) {
   :root {
-    font-size: calc(10px + 8 * ((100vw - 768px) / 832)); } }
+    font-size: calc(2.61538px + 0.96154vw); } }
 
 @media (min-width: 1600px) {
   :root {
@@ -308,6 +326,7 @@ body {
   letter-spacing: 0.3px;
   letter-spacing: .03rem;
   -webkit-text-size-adjust: 100% !important;
+     -moz-text-size-adjust: 100% !important;
       -ms-text-size-adjust: 100% !important;
           text-size-adjust: 100% !important; }
 
