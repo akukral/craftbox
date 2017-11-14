@@ -110,6 +110,9 @@ blockquote {
   margin-top: 0rem;
   margin-bottom: 1.5rem;
 }
+p{
+  max-width: 65ch;
+}
 ul ul,
 ol ol,
 ul ol,

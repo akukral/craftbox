@@ -78,6 +78,12 @@ database name | craftbox
 database user | craftbox_user
 database password | craftbox_pass
 database host | localhost
+##### ADMIN Details
+Property | Value
+---------|------
+username | admin
+password | password
+admin url | http://192.168.33.10/manager
 
 ### Additional Links
 * [Vagrant Docs](https://www.vagrantup.com/docs/)

@@ -20,7 +20,7 @@ import broswersync from 'browser-sync';
 broswersync.create();
 
 const jsSources = ['./html/public/ui/_js/main.js'];
-const styleSources = ['./html/public/ui/_scss/main.css'];
+const styleSources = ['./html/public/ui/_css/main.css'];
 const templateSources = ['./html/**/*.html', '.html/**/*.twig'];
 
 const jsPublic = './html/public/ui/js';

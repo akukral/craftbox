@@ -125,14 +125,15 @@ a:visited {
 }
 
 a:visited {
-  // color: color(var(--primary) tint(20%));
+  color: color(var(--primary) tint(20%));
 }
 a:hover,
 a:active,
 a:focus {
   opacity: .5;
-  // text-shadow: none;
-  // box-shadow: none;
+  text-shadow: none;
+  box-shadow: none;
+  outline: initial;
 }
 
 .skip {
@@ -161,7 +162,11 @@ a:focus {
   text-align: center;
 }
 *:last-child, {
-  // margin-bottom: 0;
+  margin-bottom: 0;
 }
-
+@media print {
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+  }
+}
 // EOF

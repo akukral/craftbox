@@ -1,5 +1,3 @@
-'use strict';
-
 navigator.browserDetect = (() => {
   var ua = navigator.userAgent,
     tem,
@@ -17,5 +15,6 @@ navigator.browserDetect = (() => {
   // return { 'browser': M[0], 'version': M[1] };
   return M.join('');
 })();
+
 
 // EOF
